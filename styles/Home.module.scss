@@ -1,0 +1,55 @@
+.container {
+  height: 100vh;
+  width: 80%;
+  margin: 0 auto;
+
+}
+
+.main {
+  // text-align: center;
+  height: 100vh;
+  width: 84%;
+  margin: 0 auto;
+}
+
+.title {
+  margin-bottom: 1rem;
+  border-bottom: 2px solid black;
+
+}
+
+.publishedAt {
+  margin-bottom: 40px;
+  text-align: right;
+}
+
+.post {
+  & > h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 40px 0 20px;
+    display: inline-block;
+    background-color: #888;
+    border-radius: 3px;
+    padding: 0 1rem;
+  }
+
+  & > h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 40px 0 16px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  & > p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    letter-spacing: 0.2px;
+    margin-bottom: 1rem;
+  }
+
+  & > ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+  }
+}
