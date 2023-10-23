@@ -1,5 +1,6 @@
 import { client } from "../../libs/client";
 import styles from "../../styles/Home.module.scss"
+import purify from "dompurify";
 
 // SSG
 export const getStaticProps = async (context) => {
@@ -27,7 +28,7 @@ export default function BlogId({ blog }) {
   <main className={styles.main}>
     <h1 className={styles.title}>{blog.title}</h1>
     <p className={styles.publishedAt}>{blog.publishedAt}</p>
-    <div dangerouslySetInnerHTML={{ __html: `${blog.body}` }} className={styles.post}></div>
+    <div dangerouslySetInnerHTML={{ __html: purify.sanitize(`${blog.body}`) }} className={styles.post}></div>
   </main>
   );
 };
